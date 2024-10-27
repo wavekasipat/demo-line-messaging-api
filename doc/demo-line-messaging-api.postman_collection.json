@@ -1,0 +1,100 @@
+{
+	"info": {
+		"_postman_id": "84e53631-d16e-442d-8187-1e3a61c11511",
+		"name": "demo-line-messaging-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "339505"
+	},
+	"item": [
+		{
+			"name": "POST /api/webhook",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"destination\": \"Ubf1be649d8a8cff0d81a1ed25bd75598\",\r\n    \"events\": [\r\n        {\r\n            \"type\": \"message\",\r\n            \"message\": {\r\n                \"type\": \"text\",\r\n                \"id\": \"532144295642136837\",\r\n                \"quoteToken\": \"rebnJCYKLet0aDC91N-UfchdCk9sbQn2wH30dfiGSOaelFBcDA5sMs-X4f8ftrWFvuvM-HbOFI2cO_XDLmEUGvuboWTFyf-kmI1owjWcifxD8ZcfRVULOFKKAfBWengbCNx1e34yT7ftqtgN_s9vVA\",\r\n                \"text\": \"#AB123\"\r\n            },\r\n            \"webhookEventId\": \"01JB6DY1N4FBQ9D10X0RGYTGDS\",\r\n            \"deliveryContext\": {\r\n                \"isRedelivery\": false\r\n            },\r\n            \"timestamp\": 1730014021123,\r\n            \"source\": {\r\n                \"type\": \"user\",\r\n                \"userId\": \"U42a0d48e59ff32b36f677829e0f29794\"\r\n            },\r\n            \"replyToken\": \"5900e87d546d4fe2974233f7bf6e07aa\",\r\n            \"mode\": \"active\"\r\n        }\r\n    ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://demo-line-messaging-api.pages.dev/api/webhook",
+					"protocol": "https",
+					"host": [
+						"demo-line-messaging-api",
+						"pages",
+						"dev"
+					],
+					"path": [
+						"api",
+						"webhook"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST /api/notify_room",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://demo-line-messaging-api.pages.dev/api/notify_room",
+					"protocol": "https",
+					"host": [
+						"demo-line-messaging-api",
+						"pages",
+						"dev"
+					],
+					"path": [
+						"api",
+						"notify_room"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST /api/push_text_notify",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"a236c843-dcd3-4fa8-b6f9-b23cd36ddded\",\r\n    \"message\": \"แจ้งเตือนออเดอร์ใหม่\\n\\nเลขที่: 2100542641\\nยอดรวม: 100,000 บาท\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://demo-line-messaging-api.pages.dev/api/push_text_notify",
+					"protocol": "https",
+					"host": [
+						"demo-line-messaging-api",
+						"pages",
+						"dev"
+					],
+					"path": [
+						"api",
+						"push_text_notify"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
