@@ -1,0 +1,14 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model notify_room {
+  id            String  @id(map: "notify_room_pk") @default(dbgenerated("uuid_generate_v4()")) @db.VarChar
+  register_code String? @db.VarChar
+  line_id       String? @db.VarChar
+}
