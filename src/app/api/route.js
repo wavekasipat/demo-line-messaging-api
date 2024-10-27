@@ -8,6 +8,6 @@ export async function GET() {
 export async function POST(req) {
     console.log("POST /api Start");
     const body = await req.json();
-    console.log("POST /api body:", body);
+    console.log("body:", body);
     return new Response("Hello, world!");
 }
