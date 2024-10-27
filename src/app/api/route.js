@@ -1,3 +1,5 @@
+export const runtime = "edge";
+
 export async function GET() {
     console.log("GET /api Start");
     return new Response("Hello, world!");
